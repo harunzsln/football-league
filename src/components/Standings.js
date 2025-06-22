@@ -1,11 +1,12 @@
-// src/components/Standings.js
+
 import React from 'react';
 import { useSelector } from 'react-redux';
 import ColorCircle from './ColorCircle';
 import { generateFixture } from '../utils/generateFixture';
 
 const Standings = () => {
-  const teams = useSelector((state) => state.teams);
+  const teams = useSelector((state) => state.matches.teams);
+  
 
   const sortedTeams = [...teams].sort((a, b) => {
     if (b.points !== a.points) return b.points - a.points;
@@ -35,7 +36,7 @@ const Standings = () => {
                 <ColorCircle color1={team.primaryColor} color2={team.secondaryColor} />
                 {team.name}
               </td>
-              <td>{t.points}</td>
+              <td>{team.points}</td>
               <td>{team.goalsFor}</td>
               <td>{team.goalsAgainst}</td>
               <td>{team.goalsFor - team.goalsAgainst}</td>

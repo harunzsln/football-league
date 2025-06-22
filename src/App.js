@@ -7,6 +7,7 @@ import CurrentWeekMatches from "./components/CurrentWeekMatches";
 import Standings from "./components/Standings";
 import { startLeague } from "./features/matches/matchSlice";
 import AllWeeksMatches from "./components/AllWeeksMatches";
+import ChampionModal from "./components/ChampionModal";
 
 const App = () => {
   const teams = useSelector((state) => state.teams);
@@ -34,6 +35,7 @@ const App = () => {
           <CurrentWeekMatches />
           <Standings />
           <AllWeeksMatches/>
+          <ChampionModal />
         </>
       )}
     </div>

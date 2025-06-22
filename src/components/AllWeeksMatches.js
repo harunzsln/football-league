@@ -6,7 +6,7 @@ const AllWeeksMatches = () => {
   const fixture = useSelector((state) => state.matches.fixture);
   const teams = useSelector((state) => state.teams);
 
-  const getTeam = (id) => teams.find((t) => t.id === id);
+  const getTeam = (id) => teams.find((team) => team.id === id);
 
   return (
     <div>

@@ -1,4 +1,3 @@
-// src/pages/CurrentWeekMatches.js
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import ColorCircle from '../components/ColorCircle';
@@ -18,7 +17,9 @@ const CurrentWeekMatches = () => {
     return <p>Tüm haftalar tamamlandı!</p>;
   }
 
-  const getTeamById = (id) => teams.find((t) => t.id === id);
+  const getTeamById = (id) => {
+    return teams.find((team) => team.id === id)
+  };
 
   const handlePlay = () => {
     dispatch({ type: 'matches/playCurrentWeek', asyncDispatch: dispatch });

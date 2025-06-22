@@ -9,13 +9,13 @@ const StartLeagueButton = () => {
 
     const handleStart = () => {
   const fixture = generateFixture(teams);
-  console.log("✅ Oluşturulan fikstür:", fixture); // ← Bunu ekle
+  console.log("✅ Oluşturulan fikstür:", fixture); 
 
   dispatch(startLeague(fixture));
 };
 
     if (leagueStarted || teams.length < 5) {
-        return null; // Liga zaten başladıysa veya yeterli takım yoksa butonu gösterme
+        return null;
     }
 
     return (

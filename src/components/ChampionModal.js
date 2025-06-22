@@ -1,7 +1,9 @@
 import { useSelector } from "react-redux";
+import Standings from "./Standings";
+
 
 const ChampionModal = () => {
-    const teams = useSelector((state) => state.teams);
+    const teams = useSelector((state) => state.matches.teams);
     const { fixture, currentWeek } = useSelector((state) => state.matches);
 
     if (currentWeek <= fixture.length) return null; // Ligi bitirmedik

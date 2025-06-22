@@ -1,4 +1,3 @@
-// src/features/teams/teamSlice.js
 import { createSlice, nanoid } from '@reduxjs/toolkit';
 
 const teamSlice = createSlice({

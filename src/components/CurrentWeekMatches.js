@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import ColorCircle from '../components/ColorCircle';
-
+import '../styles/CurrentWeekMatches.css';
 const CurrentWeekMatches = () => {
   const dispatch = useDispatch();
   const teams = useSelector((state) => state.teams);
@@ -26,14 +26,14 @@ const CurrentWeekMatches = () => {
   };
 
   return (
-    <div>
+    <div className="match-card">
       <h2>{currentWeek}. Hafta Maçları</h2>
-      <ul>
+      <ul className="match-list">
         {matches.map((m, index) => {
           const home = getTeamById(m.homeId);
           const away = getTeamById(m.awayId);
           return (
-            <li key={index}>
+            <li key={index}  className="match-item">
               <ColorCircle color1={home.primaryColor} color2={home.secondaryColor} />
               {home.name} vs
               <ColorCircle color1={away.primaryColor} color2={away.secondaryColor} />

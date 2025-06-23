@@ -23,18 +23,15 @@ const App = () => {
   };
 
   return (
-    <div style={{ padding: "2rem", fontFamily: "Arial" }}>
+    <div className="app">
       <h1>⚽ Mini Futbol Ligi</h1>
-      <TeamForm />
-      <button onClick={handleStart} disabled={fixture.length > 0}>
-        Ligi Başlat
-      </button>
+      <TeamForm handleStart={handleStart} />
 
       {fixture.length > 0 && (
         <>
           <CurrentWeekMatches />
           <Standings />
-          <AllWeeksMatches/>
+          <AllWeeksMatches />
           <ChampionModal />
         </>
       )}

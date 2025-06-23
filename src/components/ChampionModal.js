@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import Standings from "./Standings";
-
+import React from "react";
+import "../styles/championModal.css"; 
 
 const ChampionModal = () => {
     const teams = useSelector((state) => state.matches.teams);
@@ -8,19 +9,20 @@ const ChampionModal = () => {
 
     if (currentWeek <= fixture.length) return null; // Ligi bitirmedik
 
-    const sorted = [...teams].sort((a, b) => {
-        if (b.points !== a.points) return b.points - a.points;
-        if (b.goalDifference !== a.goalDifference) return b.goalDifference - a.goalDifference;
-        return b.goalsFor - a.goalsFor;
-    });
+  
+    const sortedTeams = [...teams].sort((a, b) => {
+    if (b.points !== a.points) return b.points - a.points;
+    const avA = a.goalsFor - a.goalsAgainst;
+    const avB = b.goalsFor - b.goalsAgainst;
+    return avB - avA;
+  });
 
-    const champion = sorted[0];
+  const champion = sortedTeams[0];
 
     return (
-    <div
+    <div className="modal"
       style={{
-        backgroundColor: '#282c34',
-        color: 'white',
+        
         padding: '2rem',
         borderRadius: '1rem',
         marginTop: '2rem',

@@ -6,6 +6,7 @@ const initialState = {
   fixture: [],
   currentWeek: 1,
   teams: [],
+  leagueStarted: false,
 };
 
 const matchSlice = createSlice({
@@ -17,8 +18,8 @@ const matchSlice = createSlice({
       state.currentWeek = 1;
       state.teams = action.payload.map((team) => ({
         ...team,
-        
       }));
+      state.leagueStarted = true;
     },
     playCurrentWeek: (state, action) => {
   const currentWeek = state.currentWeek - 1;
@@ -55,5 +56,5 @@ const matchSlice = createSlice({
   },
 });
 
-export const { startLeague, playCurrentWeek, resetLeague } = matchSlice.actions;
+export const { startLeague, playCurrentWeek, resetLeague, leagueStarted } = matchSlice.actions;
 export default matchSlice.reducer;

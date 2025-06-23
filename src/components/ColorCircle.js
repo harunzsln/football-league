@@ -11,7 +11,7 @@ const ColorCircle = ({ color1, color2, size = 20 }) => {
     marginRight: 8,
   };
 
-  return <span style={style}></span>;
+  return <span style={style}> </span>;
 };
 
 export default ColorCircle;

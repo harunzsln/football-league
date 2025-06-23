@@ -9,7 +9,7 @@ const AllWeeksMatches = () => {
   const getTeam = (id) => teams.find((team) => team.id === id);
 
   return (
-    <div>
+    <div className="past-weeks">
       <h2>Geçmiş Hafta Sonuçları</h2>
       {fixture.map((week, i) => (
         <div key={i} style={{ marginBottom: '1rem' }}>

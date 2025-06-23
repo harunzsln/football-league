@@ -3,6 +3,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import ColorCircle from './ColorCircle';
 import { generateFixture } from '../utils/generateFixture';
+import '../styles/Standings.css';
 
 const Standings = () => {
   const teams = useSelector((state) => state.matches.teams);
@@ -17,7 +18,7 @@ const Standings = () => {
   });
 
   return (
-    <div>
+    <div className="standings">
       <h2>Puan Durumu</h2>
       <table>
         <thead>
@@ -33,7 +34,7 @@ const Standings = () => {
           {sortedTeams.map((team) => (
             <tr key={team.id}>
               <td>
-                <ColorCircle color1={team.primaryColor} color2={team.secondaryColor} />
+                <ColorCircle className="color-icon" color1={team.primaryColor} color2={team.secondaryColor} />
                 {team.name}
               </td>
               <td>{team.points}</td>
@@ -49,3 +50,4 @@ const Standings = () => {
 };
 
 export default Standings;
+

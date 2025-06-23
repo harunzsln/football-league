@@ -1,0 +1,43 @@
+.team-form {
+  background: white;
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.team-form input,
+.team-form button {
+  margin: 8px 5px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.team-form button {
+  background-color: #2ecc71;
+  color: white;
+  cursor: pointer;
+}
+
+.team-form button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+input[type="color"] {
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.3);
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 6px;
+}

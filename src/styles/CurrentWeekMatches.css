@@ -1,17 +1,234 @@
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5; 
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  min-height: 100vh; 
+}
+
+
+.info-message {
+  text-align: center;
+  font-size: 1.2em;
+  color: #666;
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+}
+
 .match-card {
-  background: #ffffff;
-  border-left: 5px solid #2980b9;
-  padding: 12px;
-  margin-bottom: 10px;
+  background-color: #ffffff; 
+  border-radius: 12px; 
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); 
+  padding: 30px; 
+  margin: 40px auto; 
+  max-width: 800px; /* Maksimum genişlik */
+  text-align: center;
+  border: 1px solid #e0e0e0; /* Hafif bir kenarlık */
+}
+
+/* Başlık stili */
+.match-card h2 {
+  color: #2c3e50; /* Koyu gri başlık rengi */
+  margin-bottom: 30px; /* Başlık altı boşluk */
+  font-size: 2.2em; /* Daha büyük başlık fontu */
+  font-weight: 700; /* Kalın başlık */
+  border-bottom: 3px solid #e74c3c; /* Kırmızımsı alt çizgi */
+  padding-bottom: 15px; /* Alt çizgiye boşluk */
+  display: inline-block; /* Çizginin sadece metin kadar olmasını sağlar */
+  line-height: 1.2;
+}
+
+
+
+.match-item {
+  background-color: #fdfdfd; 
+  border: 1px solid #ebebeb; 
+  border-radius: 10px; 
+  margin-bottom: 20px; 
+  padding: 18px 25px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-size: 1.2em;
+  color: #34495e; 
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  flex-wrap: wrap; 
+  gap: 10px; 
+}
+
+
+.match-item:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18); 
+}
+
+
+.team-color-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  flex-shrink: 0; 
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+.team-name {
+  font-weight: 600; 
+  margin: 0 8px; 
+  white-space: nowrap; 
+}
+
+.vs-text {
+  font-weight: 500; 
+  color: #95a5a6; 
+  margin: 0 10px; 
+}
+
+.match-score {
+  font-weight: 700; 
+  color: #27ae60; 
+  margin-left: 15px; 
+  background-color: #e8f5e9; 
+  padding: 5px 10px;
   border-radius: 5px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  min-width: 70px; 
+  text-align: center;
 }
 
-.match-card span {
-  font-weight: bold;
+.play-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px; 
+  padding: 14px 30px; 
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-top: 35px; 
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  outline: none;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.current-week {
-  max-width: 600px;
-  margin: auto;
+.play-button:hover {
+  background-color: #2980b9; 
+  transform: translateY(-3px); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.play-button:active {
+  transform: translateY(0);
+  background-color: #2471a3; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .match-card {
+    margin: 20px;
+    padding: 25px;
+    max-width: 90%;
+  }
+
+  .match-card h2 {
+    font-size: 1.8em;
+    margin-bottom: 25px;
+  }
+
+  .match-item {
+    flex-direction: column; 
+    padding: 15px 20px;
+    font-size: 1.1em;
+    text-align: center;
+  }
+
+  .team-color-circle {
+    margin-bottom: 5px; 
+
+.team-color-circle {
+  width: 30px;
+  height: 30px; 
+  border-radius: 50%; 
+
+ 
+  border: none; 
+
+ 
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+
+  
+  flex-shrink: 0;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+}
+  }
+
+  .team-name, .vs-text, .match-score {
+    margin: 5px 0; 
+  }
+
+  .match-score {
+    margin-left: 0; 
+    width: 100%; 
+  }
+
+  .play-button {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .match-card {
+    margin: 15px;
+    padding: 20px;
+  }
+
+  .match-card h2 {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+  }
+
+  .match-item {
+    font-size: 1em;
+    padding: 10px 15px;
+    gap: 5px; 
+  }
+
+  .team-color-circle {
+    width: 25px;
+    height: 25px;
+  }
+
+  .team-name {
+    font-size: 0.95em;
+  }
+
+  .vs-text {
+    font-size: 0.9em;
+  }
+
+  .match-score {
+    font-size: 0.95em;
+    padding: 4px 8px;
+    min-width: unset; 
+  }
+
+  .play-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin-top: 25px;
+  }
 }

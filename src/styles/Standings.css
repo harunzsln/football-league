@@ -1,27 +1,93 @@
-.standings {
-  margin: 30px auto;
-  max-width: 700px;
-  background-color: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+
+.standings-panel {
+  max-width: 700px; 
 }
 
-.standings table {
+.standings-table__wrapper {
+  overflow-x: auto;
+}
+
+
+.standings-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: collapse; 
+  font-family: var(--font-main);
+  color: var(--text-color);
 }
 
-.standings th {
-  background-color: #2c3e50;
-  color: white;
+.standings-table thead {
+  border-bottom: 2px solid var(--primary-color); 
 }
 
-.standings td {
-  background-color: #ecf0f1;
+.standings-table__header-cell {
+  padding: 12px 15px;
+  font-family: var(--font-headings);
+  font-weight: 500;
+  color: var(--text-color-muted);
+  text-align: left;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.color-icon {
-  margin-right: 5px;
-  ;
+.standings-table tbody tr {
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.standings-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.standings-table tbody tr:hover {
+  background-color: var(--panel-bg-light);
+}
+
+.standings-table tbody tr:first-child {
+  background-color: rgba(0, 168, 107, 0.08);
+  font-weight: 500;
+}
+
+
+.standings-table__cell {
+  padding: 14px 15px;
+  vertical-align: middle; 
+}
+
+.standings-table__cell--team {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+}
+
+.standings-table__cell--rank {
+  font-family: var(--font-headings);
+  font-weight: 700;
+  color: var(--text-color-muted);
+  padding-right: 0;
+  text-align: center;
+}
+
+.standings-table__header-cell--center,
+.standings-table__cell--center {
+  text-align: center;
+}
+
+.standings-table__header-cell--rank {
+    width: 40px; 
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+.standings-table__team-badge {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid;
+  flex-shrink: 0;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }

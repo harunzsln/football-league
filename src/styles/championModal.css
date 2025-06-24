@@ -8,10 +8,17 @@
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.2);
   z-index: 1000;
-  text-align: center;
+  text-align: start;
+  width: 200px;
+  height: 50px;
 }
 
 .modal h2 {
   color: #27ae60;
   margin-bottom: 15px;
+}
+
+.modal text {
+  text-align: start;
+  justify-content: start;
 }

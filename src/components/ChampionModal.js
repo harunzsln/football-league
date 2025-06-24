@@ -22,15 +22,15 @@ const ChampionModal = () => {
     return (
     <div className="modal"
       style={{
-        
         padding: '2rem',
         borderRadius: '1rem',
         marginTop: '2rem',
-        textAlign: 'center',
         boxShadow: '0 0 20px gold',
       }}
     >
-      🏆 <strong>{champion.name}</strong> Şampiyon Oldu!
+      <p>
+        🏆 <strong>{champion.name}</strong> Şampiyon Oldu!
+      </p>
     </div>
   );
 };

@@ -28,8 +28,8 @@ const matchSlice = createSlice({
   if (!matches || matches.length === 0) return;
 
   matches.forEach((match) => {
-    const homeGoals = Math.floor(Math.random() * 5);
-    const awayGoals = Math.floor(Math.random() * 5);
+    const homeGoals = Math.floor(Math.random() * 7);
+    const awayGoals = Math.floor(Math.random() * 7);
     match.homeGoals = homeGoals;
     match.awayGoals = awayGoals;
 

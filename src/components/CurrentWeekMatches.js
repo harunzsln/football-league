@@ -50,7 +50,7 @@ const CurrentWeekMatches = () => {
                 className="team-color-circle"
               />
               <span className="team-name">{home.name}</span>
-              <span className="vs-text">vs</span> {/* "vs" metni için ayrı bir span */}
+              <span className="vs-text">vs</span>
               <ColorCircle
                 color1={away.primaryColor}
                 color2={away.secondaryColor}

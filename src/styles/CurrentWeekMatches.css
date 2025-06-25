@@ -29,20 +29,19 @@ body {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); 
   padding: 30px; 
   margin: 40px auto; 
-  max-width: 800px; /* Maksimum genişlik */
+  max-width: 800px; 
   text-align: center;
-  border: 1px solid #e0e0e0; /* Hafif bir kenarlık */
+  border: 1px solid #e0e0e0; 
 }
 
-/* Başlık stili */
 .match-card h2 {
-  color: #2c3e50; /* Koyu gri başlık rengi */
-  margin-bottom: 30px; /* Başlık altı boşluk */
-  font-size: 2.2em; /* Daha büyük başlık fontu */
-  font-weight: 700; /* Kalın başlık */
-  border-bottom: 3px solid #e74c3c; /* Kırmızımsı alt çizgi */
-  padding-bottom: 15px; /* Alt çizgiye boşluk */
-  display: inline-block; /* Çizginin sadece metin kadar olmasını sağlar */
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 2.2em;
+  font-weight: 700; 
+  border-bottom: 3px solid #e74c3c; 
+  padding-bottom: 15px; 
+  display: inline-block; 
   line-height: 1.2;
 }
 
